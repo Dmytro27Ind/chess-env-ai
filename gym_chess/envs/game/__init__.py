@@ -1,0 +1,1 @@
+from gym_chess.envs.game import ChessGame
