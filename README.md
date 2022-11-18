@@ -1,1 +1,16 @@
-# chess-env-ai
+# Chess Environment
+This is the Gym environment from OpenAI for AI training.
+[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://www.youtube.com/watch?v=ILTmE3oQk0k&t=2s&ab_channel=DmytroKagirov)
+
+## Requirements
+- You need to have Python 3.9 installed. Available at: https://www.python.org/downloads/
+- pip must be installed to install all project dependencies. Available at: https://pypi.org/project/pip/
+
+## Install
+Steps to install the chess environment package:
+
+1. `$ git clone https://github.com/Dmytro27Ind/chess-env-ai.git`
+
+2. `$ cd chess-env-ai`
+
+3. `$ pip install -e .`
