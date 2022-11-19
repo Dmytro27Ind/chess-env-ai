@@ -1,9 +1,9 @@
 # Chess Environment
 This is the Gym environment from OpenAI for AI training.
 
-### [Link to bachelor's work PDF](https://drive.google.com/file/d/1EYY7fulLW65Wk9m5rKvaaauP8qrtMcn4/view?usp=sharing){:target="_blank"}
+### <a href="https://drive.google.com/file/d/1EYY7fulLW65Wk9m5rKvaaauP8qrtMcn4/view?usp=sharing" target="_blank">Link to bachelor's work PDF</a>
 
-[![Watch the video](https://github.com/Dmytro27Ind/images/blob/main/chess-env-ai_video_screen.PNG)](https://www.youtube.com/watch?v=sfbLfX8UyGM&ab_channel=DmytroKagirov){:target="_blank"}
+<a href="https://www.youtube.com/watch?v=sfbLfX8UyGM&ab_channel=DmytroKagirov" target="_blank">![Watch the video](https://github.com/Dmytro27Ind/images/blob/main/chess-env-ai_video_screen.PNG)</a>
 
 ## Requirements
 - You need to have Python 3.9 installed. Available at: https://www.python.org/downloads/
