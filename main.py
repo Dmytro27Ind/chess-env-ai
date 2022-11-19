@@ -2,7 +2,9 @@ import gym
 import gym_chess
 from agents.MinimaxAB import MinimaxAB
 from agents.RandomAgent import RandomAgent
+import warnings
 
+warnings.filterwarnings("ignore")
 
 if __name__ == "__main__":
     env = gym.make('chess-v0')

@@ -1,6 +1,8 @@
 from multiprocessing import Pipe, Process
 
 import gym
+import numpy as np
+from gym.spaces import Box
 from tabulate import tabulate
 from termcolor import colored
 
@@ -49,9 +51,10 @@ class ChessEnv(gym.Env):
     def reset(self):
         self.game = ChessGame()
         self.action_space = ChessMoveSpace(self.game)
-        self.observation_space = self.game.board
+        self.observation_space = Box(low=np.array([0, 0]), high=np.array([1, 1]))   # Moc object for compiler
+        self.observ_space = self.game.board
         self.count = 0
-        return self.observation_space
+        return self.observ_space
 
     def step(self, action: list) -> [list, int, bool, int]:
         if self.game.make_move(action):
@@ -60,11 +63,11 @@ class ChessEnv(gym.Env):
             raise ValueError
 
         if self.game.status == DRAW:
-            return self.observation_space, _rewards['draw'], True, {'count': self.count, 'status': self.game.status}
+            return self.observ_space, _rewards['draw'], True, {'count': self.count, 'status': self.game.status}
         if self.game.status == WHITE_WIN or self.game.status == BLACK_WIN:
-            return self.observation_space, _rewards['win'], True, {'count': self.count, 'status': self.game.status}
+            return self.observ_space, _rewards['win'], True, {'count': self.count, 'status': self.game.status}
 
-        return self.observation_space, _rewards['playing'], False, {'count': self.count, 'status': self.game.status}
+        return self.observ_space, _rewards['playing'], False, {'count': self.count, 'status': self.game.status}
 
     def close(self):
         self.parent_conn.send(CLOSE_ENV)
